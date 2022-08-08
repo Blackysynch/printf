@@ -20,10 +20,32 @@ int _printf(const char *format, ...)
 
 	/* call_printf("Hello World")*/
 
-	for (i = 0; format[i] != '%' && format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0';)
 	{
 		/*count the number of charactes*/
+		if (format[i] != '%')
+		{
 		count = count + _putchar(format[i]);
+		i++;
+		}
+		else if (format[i] == '%' && format[i + 1] != ' ')
+		{
+			switch (format[i + 1])
+			{
+				case 'c':
+				/* print charcter from va_argument */
+				count = count + _putchar(va_arg(data, int));
+				break;
+				case 's':
+				/* print string from va_argument */
+				count = count + print_string(va_arg(data, char *));
+				break;
+				default:
+				break;
+			}
+			i += 2;
+		}
+		/*print to the screen each characters counted */
 	}
 
 	/*returns the count of characters to be printed */
