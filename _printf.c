@@ -49,9 +49,8 @@ int _printf(const char *format, ...)
 			}
 			i += 2;
 		}
-		/*print to the screen each characters counted */
+		/*print to screen each charact counted */
 	}
-
-	/*returns the count of characters to be printed */
+	/*returns count of character printed */
 	return (count);
 }
