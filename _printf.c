@@ -1,25 +1,19 @@
 #include <stdio.h>
 #include "main.h"
 #include <stdarg.h>
-
 /**
  * _printf - print string and returns out put
  * @format: string of characters
  * Return: returns count of characters in string
  */
-
 int _printf(const char *format, ...)
 {
 	int count = 0, i = 0;
-
 	va_list data;
 
 	va_start(data,  format);
-
 	/*format is a string*/
-
 	/* call_printf("Hello World")*/
-
 	for (i = 0; format[i] != '\0';)
 	{
 		/*count the number of charactes*/
@@ -51,6 +45,5 @@ int _printf(const char *format, ...)
 		}
 		/*print to screen each charact counted */
 	}
-	/*returns count of character printed */
 	return (count);
 }
