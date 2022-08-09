@@ -40,6 +40,10 @@ int _printf(const char *format, ...)
 				/* print string from va_argument */
 				count = count + print_string(va_arg(data, char *));
 				break;
+				case '%':
+				/*print string from va_argument */
+				count = count + _putchar(format[i]);
+				break;
 				default:
 				break;
 			}
