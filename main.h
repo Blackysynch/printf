@@ -4,10 +4,9 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-int _printf(const char *format, ..);
+int _printf(const char *format, ...);
 /*used to print funct*/
 int _putchar(char c);
-int puts(cha *str);
 
 int print_string(char *);
 #endif
