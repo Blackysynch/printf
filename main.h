@@ -8,5 +8,7 @@ int _printf(const char *format, ...);
 /*used to print funct*/
 int _putchar(char c);
 
+/*to print numbers*/
+int print_decimal(long int value);
 int print_string(char *);
 #endif

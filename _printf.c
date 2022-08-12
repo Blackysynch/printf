@@ -38,6 +38,12 @@ int _printf(const char *format, ...)
 				/*print string from va_argument */
 				count = count + _putchar(format[i]);
 				break;
+				case 'd':
+				count = count + print_decimal(va_arg(data, long int));
+				break;
+				case 'i':
+				count = count + print_decimal(va_arg(data, long int));
+				break;
 				default:
 				break;
 			}
